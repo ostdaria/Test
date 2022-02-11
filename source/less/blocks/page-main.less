@@ -14,10 +14,9 @@
   box-shadow: 0 4px 20px @basic-black-opacity;
   border-radius: 20px;
   position: relative;
-  top: -20px;
-  // position: absolute;
-  // bottom: 0;
-  // left: 15px;
+  // top: -130px;
+  top: -125px;
+  left: 0;
 }
 
 .page-main__item {
@@ -39,7 +38,7 @@
   font-size: 18px;
   line-height: 24px;
   color: @basic-dark-grey;
-  margin: 16px 0 12px 0;
+  margin: 13px 0 12px 0;
 }
 
 .page-main__slogan {
@@ -53,8 +52,97 @@
 }
 
 
-// @media (min-width: @tablet-width) {
-// }
+@media (min-width: @tablet-width) {
+  .page-main__wrapper {
+    padding: 0;
+  }
 
-// @media (min-width: @desktop-width) {
-// }
+  .page-main__list {
+    box-shadow: none;
+    border-radius: none;
+    position: relative;
+    top: 20px;
+  }
+
+  .page-main__item {
+    box-shadow: 0 4px 20px @basic-black-opacity;
+    border-radius: 20px;
+    display: flex;
+    gap: 32px;
+    justify-content: space-around;
+    margin-bottom: 16px;
+  }
+
+  .page-main__title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .page-main__slogan {
+    margin-right: 150px;
+  }
+
+  .page-main__slogan br {
+    display: none;
+  }
+
+  .page-main__item--goods svg,
+  .page-main__item--delivery svg,
+  .page-main__item--manufacturer svg {
+    width: 92px;
+    height: 92px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__wrapper {
+    width: 1240px;
+    padding: 93px 100px 50px 100px;
+  }
+
+  .page-main__list {
+    position: relative;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    box-shadow: 0 4px 20px @basic-black-opacity;
+  }
+
+  .page-main__item {
+    box-shadow: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: space-around;
+    margin-bottom: 0;
+    padding: 40px 100px 56px 80px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 200px;
+      right: -130px;
+      width: 261px;
+      height: 1px;
+      background-color: @basic-grey-blue;
+      background-repeat: no-repeat;
+      transform: rotate(90deg);
+    }
+  }
+
+  .page-main__item:last-child::after {
+    display: none;
+  }
+
+  .page-main__title {
+    width: 228px;
+  }
+
+  .page-main__slogan {
+    margin-right: 0;
+  }
+}
