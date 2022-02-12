@@ -33,6 +33,10 @@
   margin: 27px 0 0;
 }
 
+.page-header__text {
+  margin: 22px 0 0;
+}
+
 .page-header__slogan br {
   display: none;
 }
@@ -72,7 +76,6 @@
   }
 }
 
-
 .page-header__link:hover::after {
   content: "";
   position: absolute;
@@ -96,13 +99,13 @@
 }
 
 .page-header__image-holder {
-  margin: 46px 0;//50px
+  margin: 46px 0;
 }
 
 .page-header__image {
   width: 345px;
   height: 253px;
-  background-color: @basic-grey;
+  background-color: @basic-green;
   border-radius: 15px;
 }
 
@@ -118,7 +121,7 @@
       width: 23%;
       min-height: 743px;
       top: 0;
-      right: 1px;
+      right: 0;
       left: inherit;
       z-index: -2;
       background-color: @basic-green;
@@ -153,10 +156,11 @@
   .page-header__slogan {
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     color: @basic-dark-grey;
     text-align: left;
+    margin-top: 30px;
   }
 
   .page-header__slogan br,
@@ -165,20 +169,59 @@
   }
 
   .page-header__text {
-    margin: 61px 0 0 0;
+    margin: 53px 0 0 0;
   }
 
   .page-header__link {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 21px;
+      width: 100px;
+      height: 3px;
+      background-color: @basic-yellow;
+      z-index: 2;
+    }
+
     color: @basic-dark-grey;
+
+    &:hover {
+      color: @basic-green-opacity;
+    }
+
+    &:active {
+      color: @basic-light-grey;
+    }
+  }
+
+  .page-header__link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 98px;
+    height: 3px;
+    background-color: @basic-green-opacity;
+    z-index: 2;
+  }
+
+  .page-header__link:active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 98px;
+    height: 3px;
+    background-color: @basic-light-grey;
+    z-index: 2;
   }
 
   .page-header__image-holder {
-    margin: 56px 0 0;
-    // margin: 116px 0 0;
+    margin: 61px 0 0;
     width: 690px;
     height: 314px;
     background-image: url("../img/image-cars-tablet.png");
-    // background-color: @basic-grey;
     border-radius: 15px;
   }
 
@@ -190,9 +233,8 @@
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     width: 1240px;
-    // padding: 0;
     display: flex;
-    padding: 120px 100px;
+    padding: 80px 100px;
   }
 
   .page-header__container {
@@ -200,8 +242,6 @@
     flex-direction: row;
     align-items: none;
     padding: 0;
-    // flex-direction: none;
-    //141px
   }
 
   .page-header--preview {
@@ -212,8 +252,8 @@
       content: "";
       position: absolute;
       display: block;
-      width: 40%;
-      min-height: 743px;
+      width: 41.5%;
+      min-height: 783px;
       top: 0;
       right: 1px;
       left: inherit;
@@ -226,7 +266,18 @@
   }
 
   .page-header__title {
-    margin-right: 0;
+    margin: 105px 0 0 0;
+    font-size: 52px;
+    line-height: 65px;
+  }
+
+  .page-header__text {
+    margin: 34px 0 0 0;
+  }
+
+  .page-header__link {
+    font-size: 14px;
+    line-height: 24px;
   }
 
   .page-header__image-holder {
@@ -238,7 +289,8 @@
 
   .page-header__image {
     position: relative;
-    top: -60px;
+    top: -14px;
+    left: 0;
     display: block;
     width: 635px;
     height: 505px;

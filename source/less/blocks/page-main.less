@@ -8,25 +8,22 @@
 
 .page-main__list {
   background-color: @basic-white;
-  padding: 0;
   margin: 0;
   list-style: none;
   box-shadow: 0 4px 20px @basic-black-opacity;
   border-radius: 20px;
   position: relative;
-  // top: -130px;
   top: -125px;
   left: 0;
+  padding: 24px 27px 10px 32px;
 }
 
 .page-main__item {
-  padding: 24px 27px 24px 32px;
-  margin: 0;
+  // padding: 24px 27px 24px 32px;
+  margin: 0 0 12px 0;
 }
 
-.page-main__item--goods svg,
-.page-main__item--delivery svg,
-.page-main__item--manufacturer svg {
+.page-main__item svg {
   width: 68px;
   height: 68px;
 }
@@ -38,17 +35,18 @@
   font-size: 18px;
   line-height: 24px;
   color: @basic-dark-grey;
-  margin: 13px 0 12px 0;
+  margin: 13px 80px 12px 0;
+  text-align: left;
 }
 
 .page-main__slogan {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 23px;
   color: @basic-grey;
   text-align: left;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 
@@ -61,16 +59,18 @@
     box-shadow: none;
     border-radius: none;
     position: relative;
-    top: 20px;
+    top: 0;
+    padding: 0;
   }
 
   .page-main__item {
     box-shadow: 0 4px 20px @basic-black-opacity;
     border-radius: 20px;
     display: flex;
-    gap: 32px;
+    gap: 38px;
     justify-content: space-around;
     margin-bottom: 16px;
+    padding: 24px 27px 19px 32px;
   }
 
   .page-main__title {
@@ -79,25 +79,24 @@
   }
 
   .page-main__slogan {
-    margin-right: 150px;
+    font-size: 16px;
+    margin-right: 120px;
   }
 
   .page-main__slogan br {
     display: none;
   }
 
-  .page-main__item--goods svg,
-  .page-main__item--delivery svg,
-  .page-main__item--manufacturer svg {
-    width: 92px;
-    height: 92px;
+  .page-main__item svg {
+    width: 122px;
+    height: 122px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__wrapper {
     width: 1240px;
-    padding: 93px 100px 50px 100px;
+    padding: 123px 100px 50px 100px;
   }
 
   .page-main__list {
@@ -108,6 +107,7 @@
     flex-direction: row;
     gap: 0;
     box-shadow: 0 4px 20px @basic-black-opacity;
+    padding: 0;
   }
 
   .page-main__item {
@@ -115,17 +115,17 @@
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
     justify-content: space-around;
     margin-bottom: 0;
-    padding: 40px 100px 56px 80px;
+    padding: 40px 100px 50px 80px;
     position: relative;
 
     &::after {
       content: "";
       position: absolute;
-      top: 200px;
-      right: -130px;
+      top: 172px;
+      right: -132px;
       width: 261px;
       height: 1px;
       background-color: @basic-grey-blue;
@@ -140,9 +140,15 @@
 
   .page-main__title {
     width: 228px;
+    margin: 0 0 10px 0;
   }
 
   .page-main__slogan {
     margin-right: 0;
+  }
+
+  .page-main__item svg {
+    width: 92px;
+    height: 92px;
   }
 }

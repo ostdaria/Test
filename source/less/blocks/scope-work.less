@@ -1,5 +1,7 @@
 .scope-work__container {
-  padding: 60px 0;
+  padding: 37px 0;
+  position: relative;
+  top: -100px;
 }
 
 .scope-work__lead {
@@ -18,19 +20,24 @@
 .scope-work__list {
   list-style: none;
   padding: 0;
-  margin: 32px 0 0 0;
+  margin: 26px 0 0 0;
 }
 
 .scope-work__item {
-  padding: 24px 27px 32px 16px;
+  padding: 24px 20px 25px 16px;
   box-shadow: 0 3px 15px @basic-black-opacity;
   border-radius: 10px;
   margin-bottom: 10px;
   display: flex;
-  gap: 30px;
+  gap: 39px;
+
+  &:hover {
+    box-shadow: 0 3px 15px @basic-green-opacity;
+  }
 }
 
 .scope-work__item--checked {
+  padding: 24px 16px 24px 16px;
   border: 1px solid @basic-green;
 }
 
@@ -48,11 +55,27 @@
   font-size: 14px;
   line-height: 21px;
   color: @basic-grey;
-  margin: 10px 0 0 0;
+  margin: 16px 0 0 0;
 }
 
-.scope-work__checkmark {
+.scope-work__input-wrap {
+  position: relative;
+  // z-index: 1;
+}
+
+.scope-work__input label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  z-index: -1;
+}
+
+.scope-work__input + label::before {
+  content: "";
   position: absolute;
+  top: 4px;
+  left: 0;
   width: 24px;
   height: 24px;
   background: @basic-white;
@@ -60,18 +83,29 @@
   box-sizing: border-box;
   box-shadow: inset 0 4px 4px @basic-black-opacity;
   border-radius: 50%;
-  margin-top: 3px;
+  z-index: 2;
 }
 
-.scope-work__checkmark:checked::after {
+.scope-work__input:checked + label::after {
   content: "";
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 7px;
   width: 10px;
   height: 10px;
   background-color: @basic-green;
   border-radius: 50%;
+  z-index: 3;
+}
+
+.scope-work__input {
+  &:focus + label::before {
+    outline: 1px solid @basic-grey-blue;
+  }
+
+  &:hover + label::before {
+    border: 1px solid @basic-green-opacity;
+  }
 }
 
 .scope-work__box {
@@ -80,17 +114,33 @@
 
 @media (min-width: @tablet-width) {
   .scope-work__container {
-    padding: 50px 0;
+    padding: 70px 0;
+    position: none;
+    top: 0;
   }
 
   .scope-work__list {
-    margin-top: 48px;
+    margin-top: 40px;
   }
 
   .scope-work__item {
-    padding: 40px 127px 48px 40px;
-    gap: 60px;
-    margin-bottom: 12px;
+    padding: 40px 127px 42px 40px;
+    gap: 56px;
+    margin-bottom: 16px;
+  }
+
+  .scope-work__item--checked {
+    padding: 40px 127px 40px 40px;
+  }
+
+  .scope-work__input + label::before {
+    top: 8px;
+    left: 0;
+  }
+
+  .scope-work__input:checked + label::after {
+    top: 15px;
+    left: 7px;
   }
 
   .scope-work__lead {
@@ -98,11 +148,17 @@
     line-height: 55px;
   }
 
+  .scope-work__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .scope-work__slogan {
     display: block;
     font-size: 16px;
+    line-height: 24px;
     color: @basic-grey;
-    margin: 32px 0 0;
+    margin: 23px 0 0;
   }
 
   .scope-work__text {
@@ -122,48 +178,39 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    // margin: 0;
-    margin-top: 100px;
+    margin-top: 102px;
   }
 
   .scope-work__holder {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 99px;
   }
 
   .scope-work__lead {
+    font-size: 48px;
     text-align: left;
   }
 
   .scope-work__slogan {
+    margin: 28px 0 0 0;
     line-height: 24px;
+  }
+
+  .scope-work__list {
+    margin-top: 32px;
   }
 
   .scope-work__item {
     width: 607px;
-    padding: 40px 40px 48px 40px;
+    padding: 40px 40px;
     position: relative;
-    // z-index: 2;
-
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background-repeat: no-repeat;
-      width: 0;
-      height: 0;
-      border-bottom: 70px solid @basic-steal-grey;
-      border-left: 180px solid transparent;
-      z-index: -1;
-    }
+    background: linear-gradient(165deg, @basic-white 85%, @basic-steal-grey 15%);
   }
 
   .scope-work__box {
     display: block;
-    padding: 40px 40px 48px 40px;
+    padding: 31px 40px 48px 40px;
   }
 
   .scope-work__heading {
@@ -180,12 +227,14 @@
     font-weight: 600;
     font-size: 20px;
     position: relative;
+    margin: 5px 0 5px 0;
+    color: @basic-dark-grey;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -39px;
+      bottom: -30px;
       width: 281px;
       height: 3px;
       background-color: @basic-yellow;
@@ -195,6 +244,7 @@
 
   .scope-work__desc-count {
     font-size: 54px;
+    margin-right: 10px;
   }
 
   .scope-work__text {
