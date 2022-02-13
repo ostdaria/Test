@@ -1,4 +1,4 @@
 # Test
 Technical stack: HTML, CSS, Less, GIT, GULP, БЭМ
 
-npm start - запускает сборку проекта
+npm i && npm start - запускает сборку проекта
