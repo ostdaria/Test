@@ -24,14 +24,7 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer({
-        browserlist: [
-          "last 16 versions",
-          "> 5%",
-          "ie >= 11"
-        ],
-        cascade: true
-      }),
+      autoprefixer(),
       csso()
     ]))
     .pipe(rename("style.min.css"))

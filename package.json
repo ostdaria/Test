@@ -31,9 +31,9 @@
     "start": "gulp"
   },
   "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not ie <= 11"
+    "last 1 version",
+    "> 1%",
+    "IE 10"
   ],
   "editorconfig-cli": [
     "*.json",

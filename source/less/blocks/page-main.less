@@ -20,6 +20,10 @@
 
 .page-main__item {
   margin: 0 0 12px 0;
+
+  // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  //   width: 290px;
+  // }
 }
 
 .page-main__item svg {
@@ -69,6 +73,16 @@
     justify-content: space-around;
     margin-bottom: 16px;
     padding: 24px 27px 19px 32px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 631px;
+    }
+  }
+
+  .page-main__inner {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-left: 30px;
+    }
   }
 
   .page-main__title {
@@ -95,6 +109,10 @@
   .page-main__wrapper {
     width: 1240px;
     padding: 123px 100px 50px 100px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding: 150px 100px 50px 100px;
+    }
   }
 
   .page-main__list {
@@ -129,6 +147,10 @@
       background-color: @basic-grey-blue;
       background-repeat: no-repeat;
       transform: rotate(90deg);
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: 280px;
     }
   }
 

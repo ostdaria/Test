@@ -33,6 +33,11 @@
   margin: 27px 0 0;
 }
 
+// .page-header__holder {
+//   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//   }
+// }
+
 .page-header__text {
   margin: 22px 0 0;
 }
@@ -128,6 +133,10 @@
       background-position: 0%;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        min-height: 688px;
+      }
     }
   }
 
@@ -145,7 +154,6 @@
   }
 
   .page-header__title {
-    font-family: "Exo 2", "Arial", sans-serif;
     font-weight: 600;
     font-size: 44px;
     line-height: 55px;
@@ -154,8 +162,6 @@
   }
 
   .page-header__slogan {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: @basic-dark-grey;
