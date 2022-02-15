@@ -15,15 +15,13 @@
   position: relative;
   top: -125px;
   left: 0;
-  padding: 24px 27px 10px 32px;
+  padding: 24px 32px 10px 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-main__item {
   margin: 0 0 12px 0;
-
-  // @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  //   width: 290px;
-  // }
 }
 
 .page-main__item svg {
@@ -38,8 +36,9 @@
   font-size: 18px;
   line-height: 24px;
   color: @basic-dark-grey;
-  margin: 13px 80px 12px 0;
+  margin: 13px 0 12px 0;
   text-align: left;
+  width: 220px;
 }
 
 .page-main__slogan {
@@ -88,6 +87,7 @@
   .page-main__title {
     font-size: 20px;
     line-height: 27px;
+    width: auto;
   }
 
   .page-main__slogan {
@@ -124,6 +124,13 @@
     gap: 0;
     box-shadow: 0 4px 20px @basic-black-opacity;
     padding: 0;
+  }
+
+  .page-main__inner {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
   }
 
   .page-main__item {
