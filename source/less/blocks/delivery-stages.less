@@ -62,8 +62,18 @@
   width: 241px;
 }
 
-// @media (min-width: @tablet-width) {
-// }
+.delivery-stages__image {
+  display: none;
+}
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @tablet-width) {
+  .delivery-stages__slogan {
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .delivery-stages__image {
+    display: block;
+  }
+}
