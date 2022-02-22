@@ -81,9 +81,65 @@
   margin-bottom: 60px;
 }
 
+.companies__item:nth-child(5),
+.companies__item:nth-child(6),
+.companies__item:nth-child(7),
+.companies__item:nth-child(8) {
+  display: none;
+}
+
+.companies__button-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 12px 0 12px 0;
+}
+
+.companies__button {
+  width: 12px;
+  height: 12px;
+  background-color: @basic-steal-grey;
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.companies__button-checked {
+  width: 28px;
+  height: 28px;
+  border: 1px solid @basic-green;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 12px;
+    height: 12px;
+    background-color: @basic-green;
+    border: none;
+    border-radius: 50%;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .companies {
     width: auto;
+  }
+
+  .companies__button-holder {
+    display: none;
+  }
+
+  .companies__item:nth-child(5),
+  .companies__item:nth-child(6),
+  .companies__item:nth-child(7),
+  .companies__item:nth-child(8) {
+    display: block;
   }
 }
 

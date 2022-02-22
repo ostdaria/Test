@@ -67,6 +67,14 @@
   margin: 10px 0;
 }
 
+.attracted-clients__table-price {
+  font-family: "Exo 2", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  color: @basic-dark-grey;
+}
+
 
 .attracted-clients__table-lead {
   font-size: 14px;
@@ -80,6 +88,21 @@
   margin: 0 0 16px 0;
 }
 
+.attracted-clients__table-item--client {
+  width: 300px;
+  height: 35px;
+  background-color: @basic-green;
+}
+
+.attracted-clients__table-element--client {
+  font-family: "Exo 2", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  color: @basic-white;
+  margin: 5px 0;
+}
+
 @media (min-width: @tablet-width) {
   .attracted-clients__text,
   .attracted-clients__table-item:nth-child(1),
@@ -90,6 +113,10 @@
 
   .attracted-clients__wrapper {
     width: auto;
+  }
+
+  .attracted-clients__table-item--client {
+    display: none;
   }
 }
 
