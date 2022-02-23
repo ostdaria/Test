@@ -3,6 +3,7 @@
 }
 
 .delivery-stages__title {
+  font-family: "Exo 2", "Arial", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 35px;
@@ -17,6 +18,11 @@
 }
 
 .delivery-stages__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-stages__wrapper {
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -67,8 +73,65 @@
 }
 
 @media (min-width: @tablet-width) {
+  .delivery-stages__title {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 55px;
+  }
+
+  .delivery-stages__lead {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    position: relative;
+    margin-bottom: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 90px;
+      height: 3px;
+      background-color: @basic-yellow;
+    }
+  }
+
   .delivery-stages__slogan {
     width: auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+  }
+
+  .delivery-stages__slogan span {
+    display: block;
+  }
+
+  .delivery-stages__item {
+    gap: 30px;
+    margin: 0 0 16px 0;
+  }
+
+  .delivery-stages__wrapper {
+    padding: 25px 40px 25px 40px;
+  }
+
+
+  .delivery-stages__number-holder {
+    background-color: @basic-green;
+    border-radius: 50%;
+    width: 145px;
+    height: 68px;
+    margin: 80px 0 0 0;
+    color: @basic-white;
+  }
+
+  .delivery-stages__number-holder span {
+    position: relative;
+    top: 12px;
+    left: 22px;
+    font-size: 38px;
   }
 }
 

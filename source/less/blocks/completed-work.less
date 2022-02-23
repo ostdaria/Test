@@ -4,6 +4,7 @@
 }
 
 .completed-work__title {
+  font-family: "Exo 2", "Arial", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 35px;
@@ -113,12 +114,61 @@
     display: block;
   }
 
-  .completed-work {
+  .completed-work__title {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 55px;
+  }
+
+  .completed-work,
+  .completed-work__item {
     width: auto;
   }
 
-  .completed-work__button-holder {
+  .completed-work__item {
+    margin-bottom: 30px;
+  }
+
+  .completed-work__image-holder {
+    width: 690px;
+    height: 247px;
+    background-repeat: no-repeat;
+  }
+
+  .completed-work__item:nth-child(1) .completed-work__image-holder {
+    background-image: url("../img/work-image-first-tablet.png");
+  }
+
+  .completed-work__item:nth-child(2) .completed-work__image-holder {
+    background-image: url("../img/work-image-second-tablet.png");
+  }
+
+  .completed-work__item:nth-child(3) {
     display: none;
+  }
+
+  // .completed-work__item .completed-work__item-none {
+  //   display: none;
+  // }
+
+  .completed-work__lead {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .completed-work__slogan,
+  .completed-work__price {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .completed-work__image,
+  .completed-work__slogan br {
+    display: none;
+  }
+
+  .completed-work__desc {
+    margin-right: 220px;
   }
 }
 

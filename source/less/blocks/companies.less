@@ -46,7 +46,6 @@
   margin: 0;
 }
 
-
 .companies__image {
   margin: 0 auto;
   display: flex;
@@ -130,6 +129,49 @@
   .companies {
     width: auto;
   }
+
+  .companies__title {
+    font-size: 44px;
+    line-height: 55px;
+    margin-bottom: 64px;
+  }
+
+  .companies__list {
+    justify-content: space-around;
+    gap: 80px;
+    padding: 20px 40px;
+    margin: 0;
+  }
+
+  .companies__item {
+    margin-bottom: 0;
+  }
+
+  .companies__item:nth-child(odd) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 87px;
+      left: 180px;
+      width: 175px;
+      height: 1px;
+      background-color: @basic-special-grey;
+      transform: rotate(90deg);
+    }
+  }
+
+  .companies__lead-name {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .companies__desc {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
 
   .companies__button-holder {
     display: none;

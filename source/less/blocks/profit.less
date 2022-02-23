@@ -3,6 +3,7 @@
 // }
 
 .profit__lead {
+  font-family: "Exo 2", "Arial", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 35px;
@@ -12,11 +13,40 @@
   align-items: flex-start;
 }
 
-// @media (min-width: @tablet-width) {
-//   .profit {
-//     display: block;
-//   }
-// }
+
+@media (min-width: @tablet-width) {
+  .profit {
+    background-color: @basic-green;
+    display: flex;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -78px;
+      width: 846px;
+      height: 383px;
+      background-image: url("../img/image-background-profit-tablet.png");
+      background-position: left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  .profit__image {
+    display: block;
+  }
+
+  .profit__lead {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 55px;
+    color: @basic-white;
+    padding: 124px 310px 150px 16px;
+  }
+}
 
 // @media (min-width: @desktop-width) {
 // }

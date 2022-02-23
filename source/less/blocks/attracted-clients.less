@@ -9,6 +9,7 @@
 }
 
 .attracted-clients__title {
+  font-family: "Exo 2", "Arial", sans-serif;
   font-size: 28px;
   font-weight: 600;
   line-height: 35px;
@@ -75,7 +76,6 @@
   color: @basic-dark-grey;
 }
 
-
 .attracted-clients__table-lead {
   font-size: 14px;
   font-weight: 700;
@@ -104,6 +104,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .attracted-clients {
+    padding: 0;
+  }
+
   .attracted-clients__text,
   .attracted-clients__table-item:nth-child(1),
   .attracted-clients__table-item:nth-child(3),
@@ -112,11 +116,107 @@
   }
 
   .attracted-clients__wrapper {
+    padding: 64px 16px;
     width: auto;
+  }
+
+  .attracted-clients__holder {
+    margin: 0;
+    padding: 24px 51px 12px 51px;
+  }
+
+  .attracted-clients__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 558px;
+      height: 1px;
+      background-color: @basic-special-grey;
+    }
+  }
+
+  .attracted-clients__table-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .attracted-clients__table-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .attracted-clients__table-item:nth-child(1) {
+    background-color: @basic-green;
+  }
+
+  .attracted-clients__table-item:nth-child(1) .attracted-clients__table-element {
+    color: @basic-white;
+    padding: 10px 36px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 37;
+      transform: rotate(90deg);
+      height: 1px;
+      background-color: @basic-black-light-opacity;
+    }
+  }
+
+  .attracted-clients__table-element::before {
+    display: none;
+  }
+
+  .attracted-clients__table-element {
+    padding: 12px 0;
+    margin: 0;
+  }
+
+  .attracted-clients__table-lead {
+    margin-top: 0;
+  }
+
+  .attracted-clients__table-image {
+    width: 81px;
+    height: 74px;
+  }
+
+  .attracted-clients__text {
+    font-size: 11px;
+    line-height: 17px;
+    color: @basic-grey;
+    margin: 0;
+  }
+
+  .attracted-clients__inner svg {
+    margin: 0 0 20px 10px;
   }
 
   .attracted-clients__table-item--client {
     display: none;
+  }
+
+  .attracted-clients__title {
+    font-size: 44px;
+    line-height: 55px;
+    margin: 0 200px 30px 0;
+  }
+
+  .attracted-clients__table-slogan {
+    width: 115px;
+    margin: 0;
   }
 }
 
