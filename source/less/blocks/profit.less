@@ -39,14 +39,43 @@
     display: block;
   }
 
+  .profit__holder {
+    padding: 124px 310px 150px 16px;
+  }
+
   .profit__lead {
     font-size: 44px;
     font-weight: 600;
     line-height: 55px;
     color: @basic-white;
-    padding: 124px 310px 150px 16px;
   }
 }
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @desktop-width) {
+  .profit {
+    margin-top: 100px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 200px;
+      width: 1040px;
+      height: 450px;
+      background-image: url("../img/image-background-profit.png");
+      background-position: left;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  .profit__holder {
+    padding: 50px;
+  }
+
+  .profit__lead {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 100px 790px 130px 0;
+  }
+}

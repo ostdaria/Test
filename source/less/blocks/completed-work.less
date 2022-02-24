@@ -172,5 +172,62 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @desktop-width) {
+  .completed-work {
+    padding: 0;
+    margin-top: 100px;
+  }
+
+  .completed-work__title {
+    margin-bottom: 32px;
+  }
+
+  .completed-work__desc {
+    margin: 0 770px 56px 0;
+  }
+
+  .completed-work__list {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+  }
+
+  .completed-work__item {
+    width: 393px;
+  }
+
+  .completed-work__item:nth-child(1) .completed-work__image-holder,
+  .completed-work__item:nth-child(2) .completed-work__image-holder {
+    background-image: none;
+  }
+
+  .completed-work__item:nth-child(3) {
+    display: block;
+  }
+
+  .completed-work__inner {
+    padding: 20px 34px 30px 32px;
+  }
+
+  .completed-work__lead {
+    margin: 0 0 16px 0;
+  }
+
+  .completed-work__slogan {
+    margin: 0 0 30px 0;
+  }
+
+  .completed-work__price {
+    margin: 0;
+  }
+
+  .completed-work__image-holder {
+    margin: 0;
+  }
+
+  .completed-work__image {
+    display: block;
+    margin: 0;
+  }
+}

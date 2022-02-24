@@ -89,6 +89,10 @@
   margin-bottom: 20px;
 }
 
+.contacts__holder-element:nth-child(5) .contacts__desc-holder {
+  width: 283px;
+}
+
 @media (min-width: @tablet-width) {
   .contacts {
     width: 690px;
@@ -113,8 +117,7 @@
   .contacts__holder-element {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 16px;
 
     &::after {
       content: "";
@@ -127,8 +130,16 @@
     }
   }
 
+  .contacts__name-holder {
+    width: 175px;
+  }
+
   .contacts__holder-element:last-child::after {
     display: none;
+  }
+
+  .contacts__holder-element:nth-child(5) .contacts__desc-holder {
+    width: 434px;
   }
 
   // .contacts__holder-element:last-child br {

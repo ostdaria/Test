@@ -185,5 +185,38 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @desktop-width) {
+  .companies__list {
+    gap: 100px;
+  }
+
+  .companies__item:nth-child(odd) {
+    &::after {
+      top: 87px;
+      left: 160px;
+    }
+  }
+
+  .companies__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 87px;
+      left: 160px;
+      width: 175px;
+      height: 1px;
+      background-color: @basic-special-grey;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(4n) {
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
