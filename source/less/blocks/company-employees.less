@@ -73,6 +73,14 @@
 
 .company-employees__social-link {
   text-decoration: none;
+
+  &:hover path {
+    fill: @basic-green;
+  }
+
+  &:active path {
+    fill: @basic-dark-grey;
+  }
 }
 
 .company-employees__button-holder {
@@ -90,6 +98,16 @@
   border: none;
   border-radius: 50%;
   box-sizing: border-box;
+
+  &:hover {
+    border: @basic-dark-grey;
+    background-color: @basic-dark-grey;
+  }
+
+  &:active {
+    border: @basic-light-grey;
+    background-color: @basic-light-grey;
+  }
 }
 
 .company-employees__button-checked {
@@ -110,6 +128,24 @@
     background-color: @basic-green;
     border: none;
     border-radius: 50%;
+  }
+
+  &:hover {
+    border: 1px solid @basic-dark-grey;
+    background-color: @basic-white;
+
+    &::after {
+      background-color: @basic-dark-grey;
+    }
+  }
+
+  &:active {
+    border: 1px solid @basic-light-grey;
+    background-color: @basic-white;
+
+    &::after {
+      background-color: @basic-light-grey;
+    }
   }
 }
 

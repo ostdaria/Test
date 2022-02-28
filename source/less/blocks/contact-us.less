@@ -24,6 +24,11 @@
   resize: none;
   margin-bottom: 66px;
   padding: 10px;
+
+  &:hover {
+    color: @basic-light-grey;
+    border-color: @basic-light-grey;
+  }
 }
 
 .contact-us__wrap {
@@ -39,13 +44,21 @@
   background-color: @basic-green;
   padding: 16px 0;
   z-index: -1;
-}
 
-.contact-us__input::placeholder {
-  color: @basic-white;
-  font-size: 15px;
-  line-height: 19px;
-  padding-left: 30px;
+  &::placeholder {
+    color: @basic-white;
+    font-size: 15px;
+    line-height: 19px;
+    padding-left: 30px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid @basic-light-grey;
+
+    &::placeholder {
+      color: @basic-light-grey;
+    }
+  }
 }
 
 .contact-us__label--task::before {
@@ -61,7 +74,6 @@
   box-sizing: border-box;
 }
 
-
 .contact-us__label--image::before {
   content: "";
   position: absolute;
@@ -74,7 +86,6 @@
   z-index: 5;
   box-sizing: border-box;
 }
-
 
 .contact-us__button {
   width: 313px;
@@ -141,5 +152,37 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-// }
+@media (min-width: @desktop-width) {
+  .contact-us {
+    // min-width: 1130px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: -1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 320px;
+      width: 1040px;
+      height: 730px;
+      background-image: url("../img/image-background-contact.png");
+      background-position: left;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+  }
+
+  .contact-us__title {
+    margin-bottom: 72px;
+  }
+
+  .contact-us__textarea {
+    margin: 0 0 57px 0;
+  }
+
+  .contact-us__button {
+    margin: 41px 0 0 0;
+  }
+}
